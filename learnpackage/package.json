@@ -1,0 +1,19 @@
+{
+  "name": "angapp",
+  "version": "1.0.0",
+  "description": "this is about angular app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "angular"
+  ],
+  "author": "developerfunnel",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "zone.js": "^0.11.7"
+  }
+}
