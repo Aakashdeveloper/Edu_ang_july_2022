@@ -147,6 +147,9 @@ package.json > angular.json > src/main.ts > src/app/app.module.ts > src/app/app.
 
 ng g c header
 
+/// clone(download)
+git clone https://github.com/Aakashdeveloper/Edu_ang_july_2022
+
 
 
 
