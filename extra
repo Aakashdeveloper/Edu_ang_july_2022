@@ -70,10 +70,84 @@ Way to Represent Data
 > answer all questions
 > type 'yes'
 
+///setup Angular App////
+//Windows
+# one time for each laptop
+> open the cmd as adminstrator
+> npm i -g @angular/cli
+> close cmd
+
+# next every time you need new app
+> open cmd
+> go inside folder using cmd
+> ng new appname
+
+//Mac/linux
+# one time for each laptop
+> open the terminal
+> sudo npm i -g @angular/cli
+> close terminal
+
+# next every time you need new app
+> open terminal
+> go inside folder using terminal
+> ng new appname
+
+
+//////Step to Run App/////////
+> open cmd
+> go inside the folder of app
+> npm start
+
+////////////////////////////////////
 
 package-lock > dependency tree
 .gitignore> what not pushh to git
 node_modules > where all package available
+Readme.md(mark down) > Detail description of app
+tsconfig.json > this file have configuration to convert back in Js
+tsconfig.app.js > this file help to complie the application
+karma > help for testing configuration
+.editorconfig > Make same standard for all developer
+.browserslistrc> browser version and compatibility
+angular.json > this is the first file to run the app after package.json
+            > Any common css/js add here
+            > which is first file for .ts and .html as well
+Src
+style.css > common css for the app
+polyfills > to make app compatibility with IE
+main.ts > which is the main module
+index.html > this is the main html file
+            > afte complie all app will come inside this file
+            > first file pick by browser
+
+
+////Building Block of Angular////
+Modules (NgModule)
+    > Here all the declaration happen
+    > Parent of the app
+Component (component)
+    > Html, css ,logics
+Pipes (pipe,pipetranform)
+    > Filter the data
+    > Run time data manipulation
+Service (Injectable)
+    > Dependency Injection
+    > To connect with external agent
+Routing (NgModule)
+    > To Jump between the pages
+
+
+/////////////////////////////////////
+package.json > angular.json > src/main.ts > src/app/app.module.ts > src/app/app.component.html
+                    ||
+                    \/
+                index.html
+
+
+ng g c header
+
+
 
 
 
