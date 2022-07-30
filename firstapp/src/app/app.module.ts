@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component'
+import { HomeComponent } from './Home/Home.component';
+import { QuickSearchComponent } from './Home/QuickSearch.component';
+import { SearchComponent } from './Home/Search.component';
+import { MyUpperPipe } from './pipes/myupper.pipe';
 
 ///decorator
 @NgModule({
@@ -11,7 +15,11 @@ import { HeaderComponent } from './header/header.component'
     declarations: [
         AppComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        HomeComponent,
+        QuickSearchComponent,
+        SearchComponent,
+        MyUpperPipe
     ],
 
     //all the modules

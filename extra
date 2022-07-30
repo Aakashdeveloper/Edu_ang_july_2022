@@ -151,7 +151,21 @@ ng g c header
 git clone https://github.com/Aakashdeveloper/Edu_ang_july_2022
 
 
+//////////Data Binding/////////
+## One Way Data Binding
+.ts => .html
+> Data binding {{}}
+> Property Binding []
+> Event Binding ()
 
+## Two Way Data Binding
+.ts => .html & .html => .ts
+> two way [()]
+
+
+####Structral directive####
+*ngFor
+*ngIf
 
 
 (get) cityname >           https://zomatoajulypi.herokuapp.com/location

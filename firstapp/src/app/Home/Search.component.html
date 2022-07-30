@@ -1,0 +1,20 @@
+<div id="search">
+    <div id="logo">
+        <span>D!</span>
+    </div>
+    <div id="heading">
+        {{title}}
+    </div>
+    <div id="dropdown">
+        <select (change)="handleCity($event)">
+            <option>----SELECT YOUR CITY----</option>
+            <option *ngFor="let loc of locationData" [value]="loc.state_id">
+                {{loc.state}}
+            </option>
+        </select>
+        <select id="restaurants">
+            <option>Ama Cafe</option>
+            <option>Wow Momos</option>
+        </select>
+    </div>
+</div>
