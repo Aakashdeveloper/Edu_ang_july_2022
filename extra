@@ -208,3 +208,39 @@ https://developerpayment.herokuapp.com/paynow
 (Header) => {'x-access-token':'token value from login'}
 
 2,028,390
+
+
+var a = 10
+var b = "my age is "+a
+"my age is 10"
+
+var b = `my age is ${a}`
+"my age is 10"
+
+var a = "10"
+Number(a)
+10
+
+var b = "Hiii"
+Number(a)
+10
+
+Number(b)
+NaN
+
+var a = "10a"
+Number(a)
+NaN
+
+params
+> What you pass after /
+> Need to Define in the route
+> It is complusory to pass
+
+queryParams
+> What you pass after ?
+> No need to define
+> Not complusory to pass
+
+npm i bootstrap@3.4.1
+npm i jquery@3.6.0

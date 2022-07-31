@@ -13,8 +13,10 @@
             </option>
         </select>
         <select id="restaurants">
-            <option>Ama Cafe</option>
-            <option>Wow Momos</option>
+            <option>----SELECT YOUR Restaurants----</option>
+            <option *ngFor="let rest of restaurants">
+                {{rest.restaurant_name}}-{{rest.address}}
+            </option>
         </select>
     </div>
 </div>
