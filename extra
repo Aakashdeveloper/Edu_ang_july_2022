@@ -244,3 +244,21 @@ queryParams
 
 npm i bootstrap@3.4.1
 npm i jquery@3.6.0
+
+
+var a = [4,7,9,12,45,8,34,56]
+a.filter((data) => {return data>20})
+[45, 34, 56]
+
+var city = ["Delhi","Mumbai","London","Helsinki"]
+city.indexOf('Amsterdam')
+-1
+city.indexOf('Mumbai')
+1
+city.indexOf('Delhi')
+0
+city.indexOf('Boston')
+-1
+
+input > parent to child
+output > child to parent

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { IRest } from '../models/rest.model';
+import { ListingService } from '../services/listing.service';
 
 @Component({
     templateUrl: './listing.component.html',
@@ -7,12 +9,28 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class ListingComponent implements OnInit {
-    mealId: string = '1';
+    mealId: number = 1;
+    userInput:string = '';
+    restaurants: IRest[] = [];
+    filterText:string = "Cuisine Filter"
 
-    constructor(private route:ActivatedRoute) {}
+    constructor(private route:ActivatedRoute,
+                private listingService:ListingService) {}
 
     ngOnInit(){
-        this.mealId = this.route.snapshot.params['id'];
-        sessionStorage.setItem('mealId', this.mealId);
+        this.mealId = Number(this.route.snapshot.params['id'])
+        sessionStorage.setItem('mealId', this.mealId.toString());
+        this.listingService.getRwrtM(this.mealId )
+            .subscribe((data:IRest[]) => {
+                this.restaurants = data
+            })
+    }
+
+    datReceive(cuisineId:string){
+        console.log("cuisneId>>>>",cuisineId)
+        this.listingService.getCuisineData(cuisineId)
+            .subscribe((data:IRest[]) => {
+                this.restaurants = data
+            })
     }
 }
