@@ -21,5 +21,9 @@ export class ListingService {
         return this.http.get<IRest[]>(`${this.baseUrl}/filter/${mealId}?cuisine=${cuisineId}`)
     }
 
+    getCostData(lcost:Number,hcost:Number): Observable<IRest[]>{
+        let mealId = sessionStorage.getItem('mealId')
+        return this.http.get<IRest[]>(`${this.baseUrl}/filter/${mealId}?hcost=${hcost}&lcost=${lcost}`)
+    }
 
 }

@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeModule } from './Home/home.module';
 import { ListingModule } from './listing/listing.module';
 import { DeatilsComponent } from './deatils/deatils.component';
+import { DetailsService } from './services/Details.service';
 
 ///decorator
 @NgModule({
@@ -34,7 +35,9 @@ import { DeatilsComponent } from './deatils/deatils.component';
     ],
 
     // all the services
-    providers: [],
+    providers: [
+        DetailsService
+    ],
     // only and only main components
     bootstrap:[
         AppComponent

@@ -262,3 +262,6 @@ city.indexOf('Boston')
 
 input > parent to child
 output > child to parent
+
+ng-prestine ng-untouched ng-valid
+ng-dirty ng-touched ng-invalid

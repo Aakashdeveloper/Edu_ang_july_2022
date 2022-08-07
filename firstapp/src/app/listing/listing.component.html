@@ -6,6 +6,8 @@
             <div class="mealFilter">
                 <app-cuisine-filter [filterName]="filterText" (cuisineClicked)="datReceive($event)" ></app-cuisine-filter>
                 <hr/>
+                <app-cost-filter (costClicked)="costDataReceive($event)"></app-cost-filter>
+                <hr/>
             </div>
         </div>
     </div>
@@ -28,7 +30,7 @@
                     </div>
                     <div class="col-md-7">
                         <div class="hotel_name">
-                            <a>{{rest.restaurant_name}}</a>
+                            <a [routerLink]="['/details']" [queryParams]="{restId: rest.restaurant_id}">{{rest.restaurant_name}}</a>
                             <div class="city_name">{{rest.address}}</div>
                             <div class="city_name">{{rest.rating_text}}</div>
                             <div class="city_name">Rs. {{rest.cost}}</div>
