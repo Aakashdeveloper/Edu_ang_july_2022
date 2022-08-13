@@ -4,13 +4,13 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 
-export class FormService {
+export class UserService {
 
-    private EmpUrl = "http://localhost:8700/employee";
+    private userUrl = "https://developerjwt.herokuapp.com/api/auth/users";
 
     constructor(private http: HttpClient) {}
 
-    postEmp(employee:any[]):Observable<any[]>{
-        return this.http.post<any[]>(this.EmpUrl, employee)
+    userList():Observable<any[]>{
+        return this.http.get<any[]>(this.userUrl)
     }
 }

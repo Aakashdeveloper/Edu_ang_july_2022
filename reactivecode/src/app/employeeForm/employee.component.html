@@ -1,0 +1,27 @@
+<hr/>
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        Reactive Form
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal" [formGroup]="employeeForm">
+            <div class="form-group" [ngClass]="{'has-error':(employeeForm.get('firstname').touched || employeeForm.get('firstname').dirty ) && !employeeForm.get('firstname').valid}">
+                <label class="col-md-2 control-label" for="fname">
+                    FirstName
+                </label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="fname"
+                    formControlName="firstName"/>
+                    <div class="help-block" *ngIf="(employeeForm.get('firstname').touched || (employeeForm.get('firstname').dirty) && employeeForm.get('firstname').error)">
+                        <span *ngIf="employeeForm.get('firstname').error.required">
+                            Please Enter FirstName
+                        </span>
+                        <span *ngIf="employeeForm.get('firstname').error.minlength">
+                           Min Length Should be 3
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

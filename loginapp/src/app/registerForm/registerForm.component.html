@@ -2,31 +2,20 @@
 <div class="container">
     <div class="panel panel-primary">
         <div class="panel-heading">
-            Employee Form
+            Register Form
         </div>
         <div class="panel-body">
             <form #form="ngForm" (submit)="submitForm(form)">
                 <div class="form-group" [class.has-error]="firstname.invalid && firstname.touched">
                     <label for="fname" class="control-label">First Name</label>
                     <input class="form-control" type="text" id="fname"
-                    name="firstName" required
-                    (ngModelChange) = "firstToUpper($event)"
-                    [ngModel]="myEmployee.firstName"
+                    name="name" required
+                    [(ngModel)]="myEmployee.name"
                     #firstname="ngModel"
                     />
                     <div class="alert alert-danger" *ngIf="firstname.invalid  && firstname.touched">
                         FirstName is required
                     </div>
-                </div>
-                <div>
-                    <h4>Classes</h4>
-                    <h3>{{firstname.invalid}}</h3>
-                    <!-- <h3>{{firstname.className}}</h3> -->
-                </div>
-                <div class="form-group">
-                    <label for="lname" class="control-label">Last Name</label>
-                    <input class="form-control" type="text" id="lname"
-                    name="lastName" [(ngModel)]="myEmployee.lastName"/>
                 </div>
                 <div class="row">
                     <div class="form-group col-md-6" [class.has-error]="mail.invalid && mail.dirty">
@@ -44,24 +33,21 @@
                         <label for="password" class="control-label">Password</label>
                         <input class="form-control" type="password" id="password"
                         name="password" [(ngModel)]="myEmployee.password" #pwd="ngModel"
-                        minlength="8" (click)="showPassword($event)"
+                        minlength="8"
                         />
                         <div class="alert alert-danger" *ngIf="pwd.invalid  && pwd.dirty">
                             Min length of password is 8
                         </div>
                     </div>
                 </div>
-                <div class="form-group" [class.has-error]="hasCodeLangError">
-                    <label for="clang" class="control-label">Coding Language</label>
-                    <select class="form-control" id="clang"
-                    [(ngModel)]="myEmployee.clang" name="clang" (blur)="validateCodeLang()">
-                        <option value="default">Please Select Coding Language</option>
-                        <option *ngFor="let lang of language">
-                            {{lang}}
-                        </option>
-                    </select>
-                    <div class="alert alert-danger" *ngIf="hasCodeLangError">
-                       Please Select Valid Option
+                <div class="form-group col-md-6"  [class.has-error]="phn.invalid && phn.dirty">
+                    <label for="phone" class="control-label">Phone</label>
+                    <input class="form-control" type="text" id="phone"
+                    name="phone" [(ngModel)]="myEmployee.phone" #phn="ngModel"
+                    minlength="10" 
+                    />
+                    <div class="alert alert-danger" *ngIf="phn.invalid  && phn.dirty">
+                        Min length of password is 8
                     </div>
                 </div>
                 <button class="btn btn-success" type="submit">

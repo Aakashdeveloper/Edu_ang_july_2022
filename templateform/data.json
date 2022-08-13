@@ -1,0 +1,28 @@
+{
+  "employee": [
+    {
+      "firstName": "Amit",
+      "lastName": "Sharma",
+      "email": "Amit@gmail.com",
+      "password": "12345678",
+      "clang": "Node",
+      "id": 1
+    },
+    {
+      "firstName": "Nikita",
+      "lastName": "Patel",
+      "email": "niki@gmail.com",
+      "password": "12345678",
+      "clang": "React",
+      "id": 2
+    },
+    {
+      "firstName": "Mayank",
+      "lastName": "Gupta",
+      "email": "mayank@gmail.com",
+      "password": "12345678",
+      "clang": "JavaScript",
+      "id": 3
+    }
+  ]
+}
