@@ -1,0 +1,30 @@
+<br/>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        Employee Forms
+    </div>
+    <div class="panel-body">
+        <form [formGroup]="employeeForm">
+            <div class="form-group" [ngClass]="{'has-error':(!employeeForm.get('firstName').valid)}">
+                <label class="control-label">
+                    FirstName
+                </label>
+                <input type="text"
+                    class="form-control"
+                    formControlName="firstName"
+                    id="fname"
+                />
+                <span class="help-block" *ngIf="(employeeForm.get('firstName').errors)">
+                    <span *ngIf="employeeForm.get('firstName').errors.required">
+                        FirstName is required
+                    </span>
+                    <span *ngIf="employeeForm.get('firstName').errors.minlength">
+                       Min Length is 3
+                    </span>
+                </span>
+            </div>
+           
+
+        </form>
+    </div>
+</div>

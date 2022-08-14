@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Hii {{userInfo.name}}</h1>
+    <h2>Your Role is {{userInfo.role}}</h2>
+    <h2>Your Email is {{userInfo.email}}</h2>
+    <h3>Permission:{{userInfo.role === "Admin" ? "You have Access to View Users":"You Can only See Your Profile" }}</h3>
+    <div *ngIf='userInfo.role === "Admin"'>
+        <a class="btn btn-success" [routerLink]="['/users']">View Users</a>
+    </div>
+    <button class="btn btn-danger" (click)="logoutUser()">Logout</button>
+</div>

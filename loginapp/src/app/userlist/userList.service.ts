@@ -8,9 +8,12 @@ export class UserService {
 
     private userUrl = "https://developerjwt.herokuapp.com/api/auth/users";
 
+
     constructor(private http: HttpClient) {}
 
     userList():Observable<any[]>{
         return this.http.get<any[]>(this.userUrl)
     }
+
+    
 }
