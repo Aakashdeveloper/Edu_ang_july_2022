@@ -24,18 +24,21 @@ Reactive Form
 Login app (jwt)
 Deployment
 >>>>>>>>>
-AWS
-Heroku
 Angular over node server (MEAN)
+Heroku
+Netlify
+AWS
+/////////////////////////////////
 Nginx
 Jenkins For Angular
-Netlify
 Docker
 >>>>>>>>>>
 Angular Material (https://material.angular.io/components/select/examples)
+combine login + zomato
+
+Animation
 Testing
 Github
-combine login + zomato
 
 ///////////////////
 Angular
