@@ -28,14 +28,13 @@ Angular over node server (MEAN)
 Heroku
 Netlify
 AWS
-/////////////////////////////////
 Nginx
 Jenkins For Angular
 Docker
 >>>>>>>>>>
 Angular Material (https://material.angular.io/components/select/examples)
+/////////////////////////////////
 combine login + zomato
-
 Animation
 Testing
 Github
@@ -287,3 +286,7 @@ DummyApi
 /******UserInfo*****/
 (GET) => https://developerjwt.herokuapp.com/api/auth/userinfo
 (Header) => {'x-access-token':'token value from login'}
+
+
+docker build . -t imagename
+docker run -p 4200:8700 imagename

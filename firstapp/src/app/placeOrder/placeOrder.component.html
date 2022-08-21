@@ -1,0 +1,69 @@
+<hr/>
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h2>Your Order for Restaurant {{restName}}</h2>
+        </div>
+        <div class="panel-body">
+            <form #form="ngForm" (submit)="submitForm(form)">
+                <input type="hidden" [(ngModel)]="myOrder.cost" name="cost"/>
+                <input type="hidden" [(ngModel)]="myOrder.id" name="id"/>
+                <input type="hidden" [(ngModel)]="myOrder.hotel_name" name="hotel_name"/>
+                <div class="form-group">
+                    <label for="fname" class="control-label">First Name</label>
+                    <input class="form-control" type="text" id="fname"
+                    name="name" required
+                    [(ngModel)]="myOrder.name"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="email" class="control-label">Email</label>
+                    <input class="form-control" type="text" id="email"
+                    name="email" required
+                    [(ngModel)]="myOrder.email"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="address" class="control-label">Address</label>
+                    <input class="form-control" type="text" id="address"
+                    name="address" required
+                    [(ngModel)]="myOrder.address"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="control-label">Phone</label>
+                    <input class="form-control" type="text" id="phone"
+                    name="phone" required
+                    [(ngModel)]="myOrder.phone"
+                    />
+                </div>
+                <h3>Total Cost: Rs.344</h3>
+                <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#paymentModal">
+                    Place Order
+                </button>
+                <!-- Modal -->
+                <div id="paymentModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Order Payment for Id {{myOrder.id}}</h4>
+                        </div>
+                        <div class="modal-body">
+                        <p>Procces for the payment Rs.{{myOrder.cost}}</p>
+                        <a class="btn btn-info" [href]="url">
+                            PayNow
+                        </a>                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -11,6 +11,7 @@ import { HomeModule } from './Home/home.module';
 import { ListingModule } from './listing/listing.module';
 import { DeatilsComponent } from './deatils/deatils.component';
 import { DetailsService } from './services/Details.service';
+import { PlaceOrder } from './placeOrder/placeOrder.componet';
 
 ///decorator
 @NgModule({
@@ -21,7 +22,8 @@ import { DetailsService } from './services/Details.service';
         HeaderComponent,
         FooterComponent,
         NotfoundComponent,
-        DeatilsComponent
+        DeatilsComponent,
+        PlaceOrder
     ],
 
     //all the modules
