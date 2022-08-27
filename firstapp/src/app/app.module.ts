@@ -12,6 +12,12 @@ import { ListingModule } from './listing/listing.module';
 import { DeatilsComponent } from './deatils/deatils.component';
 import { DetailsService } from './services/Details.service';
 import { PlaceOrder } from './placeOrder/placeOrder.componet';
+import { OrderService } from './services/Order.service';
+import { BookingComponent } from './view-booking/booking.component';
+import { RegsiterFormsComponent } from './registerform/registerForm.component';
+import { LoginFormsComponent } from './loginform/loginForm.component';
+import { RegisterFormService } from './services/registerForm.service';
+import { LoginFormService } from './services/loginForm.service';
 
 ///decorator
 @NgModule({
@@ -23,7 +29,10 @@ import { PlaceOrder } from './placeOrder/placeOrder.componet';
         FooterComponent,
         NotfoundComponent,
         DeatilsComponent,
-        PlaceOrder
+        PlaceOrder,
+        BookingComponent,
+        RegsiterFormsComponent,
+        LoginFormsComponent
     ],
 
     //all the modules
@@ -38,7 +47,10 @@ import { PlaceOrder } from './placeOrder/placeOrder.componet';
 
     // all the services
     providers: [
-        DetailsService
+        DetailsService,
+        OrderService,
+        LoginFormService,
+        RegisterFormService
     ],
     // only and only main components
     bootstrap:[

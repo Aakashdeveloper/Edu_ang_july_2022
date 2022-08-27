@@ -2,7 +2,8 @@ footer{
     height:140px;
     width:100%;
     background:#3b2632;
-    color:white
+    color:white;
+    display:inline-block;
     /* border:5px double orange */
 }
 .footDiv{
@@ -20,4 +21,12 @@ ul{
 }
 p{
     text-align: center;
+}
+.social{
+    text-align: center;
+}
+.socialImg{
+    height:50px;
+    width:50px;
+
 }

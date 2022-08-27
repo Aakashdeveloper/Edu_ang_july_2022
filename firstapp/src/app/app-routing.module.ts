@@ -5,8 +5,14 @@ import { ListingComponent } from './listing/listing.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { DeatilsComponent } from './deatils/deatils.component';
 import { PlaceOrder } from './placeOrder/placeOrder.componet';
+import { BookingComponent } from './view-booking/booking.component';
+import { RegsiterFormsComponent } from './registerform/registerForm.component';
+import { LoginFormsComponent } from './loginform/loginForm.component';
 
 const routes: Routes = [
+    { path:'login',component: LoginFormsComponent},
+    { path:'register',component: RegsiterFormsComponent},
+    { path:'viewBooking',component: BookingComponent},
     { path:'details', component: DeatilsComponent},
     { path:'order/:restName', component: PlaceOrder},
     { path:'listing/:id', component: ListingComponent},
