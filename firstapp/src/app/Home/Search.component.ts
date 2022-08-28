@@ -14,6 +14,10 @@ export class SearchComponent implements OnInit {
     keyword: String = 'Test Data';
     locationData:ICity[] = []
     restaurants: IRest[] = []
+    isOpen = true;
+    toggle() {
+      this.isOpen = !this.isOpen;
+    }
 
     // user for declarations
     constructor(private homeService:HomeService){

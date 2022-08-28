@@ -18,6 +18,7 @@ import { RegsiterFormsComponent } from './registerform/registerForm.component';
 import { LoginFormsComponent } from './loginform/loginForm.component';
 import { RegisterFormService } from './services/registerForm.service';
 import { LoginFormService } from './services/loginForm.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 ///decorator
 @NgModule({
@@ -42,7 +43,8 @@ import { LoginFormService } from './services/loginForm.service';
         AppRoutingModule,
         FormsModule,
         HomeModule,
-        ListingModule
+        ListingModule,
+        BrowserAnimationsModule
     ],
 
     // all the services
