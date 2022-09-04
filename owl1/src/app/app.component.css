@@ -1,0 +1,13 @@
+
+.card{
+    height:250px;
+    width:250px;
+    padding:10px;
+    text-align:center;
+}
+.card > img {
+    height:170px;
+}
+.owl-item{
+    width:200px !important
+}
